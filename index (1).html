@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amine Nfissi — Software Engineering Student</title>
+<meta name="description" content="Portfolio d'Amine Nfissi, étudiant en génie logiciel à l'ESISA, Fès.">
+<meta name="theme-color" content="black">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='black'/><text x='16' y='22' font-size='15' text-anchor='middle' fill='skyblue' font-family='monospace'>AN</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#about">Aller au contenu</a>
+
+<div id="boot" aria-hidden="true"><pre id="bootLog"></pre><div class="bar"><i id="bootBar"></i></div></div>
+
+<header class="hud">
+  <a class="brand" href="#home"><img src="assets/images/ma-photo.jpeg" alt="" width="36" height="36"><span>AMINE NFISSI</span></a>
+  <div class="xp" aria-live="off">
+    <span id="lvl">LVL 0/7</span>
+    <div class="bar" role="progressbar" aria-label="Progression XP" aria-valuemin="0" aria-valuemax="1000"><i id="xpBar"></i></div>
+    <span id="xp">0 XP</span>
+  </div>
+  <button id="menuBtn" class="btn ghost" aria-haspopup="dialog">Map</button>
+</header>
+
+<nav class="rail" aria-label="Niveaux">
+  <a href="#home"><b>Home</b></a><a href="#about"><b>About</b></a><a href="#education"><b>Education</b></a>
+  <a href="#experience"><b>Experience</b></a><a href="#projects"><b>Projects</b></a><a href="#skills"><b>Skills</b></a>
+  <a href="#badges"><b>Soft skills</b></a><a href="#contact"><b>Contact</b></a>
+</nav>
+
+<main>
+<section id="home" class="hero" data-lv="0">
+  <span class="trace t1"></span><span class="trace t2"></span><span class="trace t3"></span>
+  <div class="hero-txt">
+    <p class="muted">Developer Quest</p>
+    <h1 aria-label="Amine Nfissi"><span data-scramble>AMINE</span><span data-scramble>NFISSI</span></h1>
+    <p class="role">Software Engineering Student</p>
+    <p class="tag">Building ideas into software. Bienvenue dans mon univers.</p>
+  </div>
+  <div class="start" role="group" aria-label="Menu de démarrage">
+    <button class="btn primary" data-go="about">START QUEST</button>
+    <button class="btn" id="exploreBtn">EXPLORE</button>
+    <button class="btn" data-go="contact">CONTACT</button>
+    <small class="muted">↑ ↓ pour naviguer</small>
+  </div>
+</section>
+
+<section id="about" data-lv="1">
+  <header class="sec-h"><p class="lv">LEVEL 01</p><h2>About me</h2></header>
+  <div class="about reveal">
+    <figure class="card-photo">
+      <img src="assets/images/ma-photo.jpeg" alt="Portrait d'Amine Nfissi" width="722" height="1280">
+      <figcaption><b>Amine Nfissi</b><span>Software Engineering Student</span></figcaption>
+    </figure>
+    <div>
+      <p>Je suis Amine Nfissi, étudiant en troisième année de génie logiciel à l'ESISA, à Fès. Ce qui me motive, c'est de comprendre comment les choses fonctionnent, du code qui s'exécute jusqu'au système qui le fait tourner, et d'en faire quelque chose d'utilisable.</p>
+      <p>Algorithmes, systèmes, bases de données, développement web : j'aime transformer une idée en projet concret. Je veux continuer à progresser techniquement, découvrir de nouvelles technologies et construire des solutions utiles.</p>
+      <ul class="chips">
+        <li>Développement logiciel</li><li>Algorithmes</li><li>Systèmes informatiques</li><li>Bases de données</li><li>Nouvelles technologies</li><li>Projets concrets</li>
+      </ul>
+      <dl class="stats">
+        <div><dt>Année</dt><dd>3ème année</dd></div><div><dt>École</dt><dd>ESISA</dd></div>
+        <div><dt>Spécialité</dt><dd>Software Engineering</dd></div><div><dt>Pays</dt><dd>Morocco</dd></div>
+        <div><dt>Ville</dt><dd>Fès</dd></div><div><dt>Projets</dt><dd>Plusieurs projets académiques</dd></div>
+      </dl>
+    </div>
+  </div>
+  <div class="term reveal" id="term">
+    <div class="term-bar"><span>amine@portfolio:~</span><small class="muted">tape help</small></div>
+    <div id="termOut" role="log" aria-live="polite"></div>
+    <form id="termForm" autocomplete="off"><label for="termIn">amine@portfolio:~$</label><input id="termIn" spellcheck="false" autocapitalize="none" aria-label="Commande"></form>
+  </div>
+</section>
+
+<section id="education" data-lv="2">
+  <header class="sec-h"><p class="lv">LEVEL 02</p><h2>Education</h2></header>
+  <ol class="timeline">
+    <li class="reveal"><h3>Baccalauréat scientifique</h3><p>Lycée Abdelkrim Rais, Maroc</p></li>
+    <li class="reveal"><h3>Génie logiciel — ESISA</h3><p>École Supérieure d'Ingénierie en Sciences Appliquées, Fès, Maroc. Licence / cursus en génie logiciel, actuellement en 3ème année.</p>
+      <p class="muted"><span id="modCount">0</span> / 15 modules débloqués</p>
+      <ul class="modules" id="modules">
+        <li>Algorithmes</li><li>Traitement du signal</li><li>Assembleur</li><li>Systèmes embarqués</li><li>Architecture des ordinateurs</li>
+        <li>Programmation C</li><li>Programmation C++</li><li>Python</li><li>Bases de données</li><li>Développement web</li>
+        <li>Linux</li><li>Systèmes</li><li>Mathématiques / statistiques</li><li>Électronique numérique</li><li>MATLAB</li>
+      </ul>
+    </li>
+  </ol>
+  <div class="langs reveal">
+    <h3>Languages</h3>
+    <div><span>Arabe</span><div class="ladder" style="--n:6"><b></b></div><em>Langue maternelle</em></div>
+    <div><span>Français</span><div class="ladder" style="--n:5"><b></b></div><em>C1</em></div>
+    <div><span>Anglais</span><div class="ladder" style="--n:4"><b></b></div><em>B2</em></div>
+  </div>
+</section>
+
+<section id="experience" data-lv="3">
+  <header class="sec-h"><p class="lv">LEVEL 03</p><h2>Experience</h2></header>
+  <article class="mission reveal" tabindex="0">
+    <p class="badge-tag">INTERNSHIP</p>
+    <h3>Stagiaire — Transport SARL</h3>
+    <p class="muted">Développement de flux de données · API / EDI</p>
+    <p>J'ai participé à un projet concret de développement de flux de données autour d'API et d'EDI. Cette mission m'a permis de comprendre comment des systèmes échangent leurs données, de les manipuler, et de découvrir le fonctionnement d'un environnement professionnel.</p>
+    <div class="flow" aria-hidden="true"><span>Émetteur</span><i></i><span>Récepteur</span></div>
+  </article>
+</section>
+
+<section id="projects" data-lv="4">
+  <header class="sec-h"><p class="lv">LEVEL 04</p><h2>Projects</h2></header>
+  <div class="grid">
+    <article class="proj reveal" data-t="Jeu d'échecs et de dames">
+      <div class="art board" aria-hidden="true"><i></i></div>
+      <p class="muted">Programmation orientée objet · Application graphique</p>
+      <h3>Jeu d'échecs et de dames</h3>
+      <p>Jeu de plateau avec interface graphique, conçu en programmation orientée objet.</p>
+      <ul class="chips"><li>C++</li><li>Qt</li></ul>
+      <ul class="more" hidden><li>Interface graphique réalisée avec Qt</li><li>Code structuré en classes (POO)</li><li>Deux jeux de plateau : échecs et dames</li></ul>
+      <div class="acts"><button class="btn primary sm view">VIEW PROJECT</button><button class="btn sm" disabled title="Lien à ajouter">SOURCE CODE</button></div>
+    </article>
+    <article class="proj reveal" data-t="Système de gestion académique">
+      <div class="art sheet" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <p class="muted">Application de gestion · Langage C</p>
+      <h3>Système de gestion académique</h3>
+      <p>Application permettant de gérer des informations académiques.</p>
+      <ul class="chips"><li>C</li><li>Structures</li><li>Fichiers</li></ul>
+      <ul class="more" hidden><li>Gestion des étudiants</li><li>Gestion des notes</li><li>Données enregistrées dans des fichiers</li></ul>
+      <div class="acts"><button class="btn primary sm view">VIEW PROJECT</button><button class="btn sm" disabled title="Lien à ajouter">SOURCE CODE</button></div>
+    </article>
+    <article class="proj reveal" data-t="Help Desk Lite">
+      <div class="art tickets" aria-hidden="true"><i></i><i></i><i></i></div>
+      <p class="muted">Plateforme intelligente de gestion et suivi des tickets</p>
+      <h3>Help Desk Lite</h3>
+      <p>Application web pour créer, suivre et gérer des demandes sous forme de tickets.</p>
+      <ul class="chips"><li>PHP 8+</li><li>MySQL / MariaDB</li><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>XAMPP</li></ul>
+      <ul class="more" hidden><li>Création de tickets</li><li>Suivi des tickets</li><li>Gestion des demandes</li><li>Interface web</li><li>Stockage des données</li><li>Système de gestion</li></ul>
+      <div class="acts"><button class="btn primary sm view">VIEW PROJECT</button><button class="btn sm" disabled title="Lien à ajouter">SOURCE CODE</button></div>
+    </article>
+    <article class="proj reveal" data-t="Développement de flux de données">
+      <div class="art flow" aria-hidden="true"><span>API</span><i></i><span>EDI</span></div>
+      <p class="muted">Stage · Intégration de données</p>
+      <h3>Développement de flux de données</h3>
+      <p>Projet API / EDI réalisé pendant mon stage chez Transport SARL.</p>
+      <ul class="chips"><li>API</li><li>EDI</li></ul>
+      <ul class="more" hidden><li>Développement de flux de données</li><li>Travail autour d'API / EDI</li><li>Compréhension et manipulation des échanges de données</li><li>Réalisé en environnement professionnel</li></ul>
+      <div class="acts"><button class="btn primary sm view">VIEW PROJECT</button><button class="btn sm" disabled title="Projet d'entreprise : pas de lien public">SOURCE CODE</button></div>
+    </article>
+  </div>
+</section>
+
+<section id="skills" data-lv="5">
+  <header class="sec-h"><p class="lv">LEVEL 05</p><h2>Tech skills</h2><p class="muted">Ouvre chaque branche pour explorer l'arbre.</p></header>
+  <div class="tree reveal">
+    <details open><summary>Programming</summary><ul><li>C</li><li>C++</li><li>Python</li><li>JavaScript</li><li>Node.js</li></ul></details>
+    <details open><summary>Web</summary><ul><li>HTML5</li><li>CSS3</li><li>JavaScript</li></ul></details>
+    <details open><summary>Database</summary><ul><li>SQL</li><li>MySQL</li><li>MariaDB</li></ul></details>
+    <details open><summary>Systems</summary><ul><li>Linux</li><li>Windows</li><li>Shell / scripting</li></ul></details>
+    <details><summary>Tools</summary><ul><li>MATLAB</li><li>Arduino</li><li>Systèmes embarqués</li></ul></details>
+    <details><summary>Electronics &amp; science</summary><ul><li>Électronique numérique</li><li>Traitement du signal</li><li>Architecture des ordinateurs</li></ul></details>
+  </div>
+</section>
+
+<section id="badges" data-lv="6">
+  <header class="sec-h"><p class="lv">LEVEL 06</p><h2>Soft skills</h2></header>
+  <ul class="badges" id="badgeList">
+    <li>Curiosité</li><li>Apprentissage continu</li><li>Esprit logique</li><li>Résolution de problèmes</li><li>Adaptabilité</li>
+    <li>Travail en équipe</li><li>Autonomie</li><li>Créativité</li><li>Motivation</li><li>Organisation</li>
+  </ul>
+</section>
+
+<section id="contact" data-lv="7">
+  <header class="sec-h"><p class="lv">LEVEL 07</p><h2>Mission complete?</h2><p>Let's build something together.</p></header>
+  <div class="cta reveal">
+    <a class="btn primary" href="mailto:aminenf33@gmail.com">EMAIL ME</a>
+    <a class="btn" href="https://www.linkedin.com/in/amine-nfissi-2ab748337" target="_blank" rel="noopener">LINKEDIN</a>
+    <a class="btn" href="tel:+212632256050">CALL ME</a>
+  </div>
+  <dl class="stats reveal">
+    <div><dt>Nom</dt><dd>Amine Nfissi</dd></div>
+    <div><dt>Email</dt><dd>aminenf33@gmail.com</dd></div>
+    <div><dt>Téléphone</dt><dd>+212 632 256 050</dd></div>
+    <div><dt>LinkedIn</dt><dd>Amine Nfissi</dd></div>
+  </dl>
+  <div class="end reveal" id="end">
+    <h3>MISSION COMPLETE</h3>
+    <p>Thanks for exploring my portfolio.</p>
+    <p class="muted" id="summary"></p>
+    <p>Ready to build something?</p>
+    <div class="cta"><a class="btn primary" href="mailto:aminenf33@gmail.com">CONTACT AMINE</a><button class="btn" id="restart">RESTART QUEST</button></div>
+  </div>
+</section>
+</main>
+
+<footer><p class="muted">© Amine Nfissi — ESISA, Fès</p></footer>
+
+<dialog id="menu" aria-label="Level select">
+  <h2>Level select</h2>
+  <ul id="menuList"></ul>
+  <button class="btn ghost close" data-close>Fermer</button>
+</dialog>
+<dialog id="projDlg" aria-labelledby="projTitle">
+  <h2 id="projTitle"></h2>
+  <ul id="projMore"></ul>
+  <button class="btn ghost close" data-close>Fermer</button>
+</dialog>
+<div id="toast" role="status"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
